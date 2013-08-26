@@ -14,4 +14,4 @@ print("GITHUB");
 
 system "$cmd";
 
-exit 1;
+exit 0;

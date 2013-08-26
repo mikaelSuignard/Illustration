@@ -47,3 +47,4 @@ my $pathE2ETest = File::Spec->catfile( $confDir, "karma-e2e.conf.js" );
 &runTest($pathE2ETest) if(-e $pathE2ETest);
 
 #To do jenkins.
+exit 0;

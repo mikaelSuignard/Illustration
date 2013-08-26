@@ -107,4 +107,4 @@ my (@findProcess) = &findProcessOnCurrentPath("node", $path);
 #my $cmd = "ps -ef | grep web-server.js";
 #my $results = `$cmd`;
 
-exit 1;
+exit 0;
