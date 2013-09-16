@@ -38,12 +38,15 @@ sub runTest {
 
 my $confDir = &init();
 
-my $pathUnitTest = File::Spec->catfile( $confDir, "karma.conf.js" );
+#my $pathUnitTest = File::Spec->catfile( $confDir, "karma.conf.js" );
+my $pathUnitTest = File::Spec->catfile( $confDir, "karma_jenkins.conf.js" );
+
 my $cr = &runTest($pathUnitTest) if(-e $pathUnitTest);
 if($cr == 0) { print "Sucess";}
 if($cr == 1) {print "Failure";}
 
-my $pathE2ETest = File::Spec->catfile( $confDir, "karma-e2e.conf.js" );
+#my $pathE2ETest = File::Spec->catfile( $confDir, "karma-e2e.conf.js" );
+my $pathE2ETest = File::Spec->catfile( $confDir, "karma-e2e_jenkins.conf.js" );
 &runTest($pathE2ETest) if(-e $pathE2ETest);
 
 #To do jenkins.

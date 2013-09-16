@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="Chrome 27.0.1453 (Linux)" package="unit" timestamp="2013-09-05T20:04:10" id="0" hostname="mickael-System-Product-Name" tests="1" errors="0" failures="0" time="0.01">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36"/>
+    </properties>
+    <testcase name="should create &quot;phones&quot; model with 4 phones" time="0.01" classname="unit Chrome 27.0.1453 (Linux).Illustration controllers IllustrationCtrl"/>
+    <system-out><![CDATA[Chrome 27.0.1453 (Linux) LOG: LOG
+ 'Projet Illustration', undefined
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>
