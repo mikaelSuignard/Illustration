@@ -1,0 +1,39 @@
+<!--
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="lib/angular/angular.js"></script>
+        <title>Réalisations artistiques personnelles</title>
+    </head>
+    <body>
+		<header>
+			   <h1>Réalisation d'un Phare</h1>
+        </header>
+         <nav>
+                    <ul>
+                        <li><a href="Essai.html">Accueil</a></li>
+                        <li><a href="#PhareBD">Réalisation d'un Phare</a></li>
+                    </ul>
+          </nav>
+    -->      
+          <article>
+				<h1>Liste des images</h1>
+				<!-- <canvas id="activeContainer" height="720px" style=" left: 0; opacity: 1;" width="959px"></canvas> -->
+				
+				<img ng-src="img/PhareMontage_1_idée.JPG"></img>
+				<img ng-src="img/MaquetteBateau.JPG"></img>
+				<!--<img src="img/PhareMontage_1_idée.JPG" alt="1_Idée" id="img1" />
+				<img src="img/PhareMontage_2_cartons.JPG" alt="2_cartons" id="img2" />-->
+				
+			</article>
+               
+       <!--      
+            <footer>
+            </footer>
+          
+          
+                    
+    </body>
+</html>-->

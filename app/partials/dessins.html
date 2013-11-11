@@ -1,0 +1,22 @@
+<article>
+	<h1>Liste des images</h1>
+	<img ng-src="img/Ocean.jpg"></img>		
+	
+	<li ng-repeat="image in images">
+		<img ng-src="img/{{image}}"></img>	
+	</li>
+	<!-- $scope.images -->	
+	
+	<div ng-controller="UploadController">
+		<form>
+			<input type="file" ng-file-select="onFileSelect($files)" >
+ <!--  <input type="file" ng-file-select="onFileSelect($files)" multiple> -->
+  
+		</form>
+		<b>Preview:</b><br />
+		<i ng-hide="imageSrc">No image choosed</i>
+		<img ng-src="{{imageSrc}}" /><br/>
+		<b>Progress:</b>
+			<progress value="{{progress}}"></progress>
+    </div>
+</article>
