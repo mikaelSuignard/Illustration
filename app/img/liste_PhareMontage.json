@@ -1,0 +1,12 @@
+{
+  "images": [
+		{ "file" :"PhareMontage_1_idee.JPG", "legende" : "idée", "partial" : "idee" },
+		{ "file" :"PhareMontage_2_cartons.JPG", "legende" : "cartons", "partial" : "cartons" },
+		{ "file" :"PhareMontage_3_cartonsPeints.JPG", "legende" : "cartonsPeints", "partial" : "cartonsPeints" },
+		{ "file" :"PhareMontage_4_1erEtage.JPG", "legende" : "1erEtage", "partial" : "1erEtage"  },
+		{ "file" :"PhareMontage_5_SansAbatSansTour.JPG", "legende" : "SansAbatSansTour", "partial" : "SansAbatSansTour" },
+		{ "file" :"PhareMontage_6_SansAbat.JPG", "legende" : "SansAbat", "partial" : "SansAbat" },
+		{ "file" :"PhareMontage_7_Fin.JPG", "legende" : "Fin", "partial" : "Fin" }
+	]
+}
+
