@@ -3,6 +3,7 @@
 /* Controllers */
 angular.module('Illustration.controllers', [])
 .controller('IllustrationCtrl', IllustrationController)
+.controller('ImagesCtrl', ImagesController)
 .controller('UploadCtrl', UploadController)
 ;
 
@@ -56,6 +57,42 @@ var IllustrationController = function ($scope) {
             }
         });*/
 };
+
+var ImagesController = function ($scope, $http) {
+	
+	// Initialisation du tableau images
+    $scope.images = [];
+    $scope.imgCourante = "";
+    
+    $scope.go = function(image) {
+		$scope.imgCourante = image;
+		console.log("ImagesController : nouvelle image" + $scope.imgCourante.legende);
+		
+		var c=document.getElementById("myCanvas");
+		var ctx=c.getContext("2d");
+		var img=document.getElementById($scope.imgCourante.partial);
+		
+		//canvas.width=div.scrollWidth
+		//canvas.height=div.scrollHeight -->
+		
+		c.width  = window.innerWidth /2;
+		c.height = window.innerHeight /2;
+		ctx.scale(0.2,0.2);
+		ctx.drawImage(img,10,10);
+	}
+    
+    // On va chercher dans l'API github pour peupler le tableau
+    // tableau Json : ressource ...
+    //$http.get('http://localhost:8001/app/img/liste_PhareMontage.json')
+    $http.get('/app/img/liste_PhareMontage.json')
+        .success(function(data) {
+            $scope.repos = data.repositories;
+            $scope.images = data.images;
+        });
+    console.log("ImagesController : Projet Illustration");
+	console.log("ImagesController" + $scope.repos);
+	console.log("ImagesController" + $scope.images);
+}
 
 var UploadController = function ($scope, fileReader) {
 	console.log("UploadController : Projet Illustration");

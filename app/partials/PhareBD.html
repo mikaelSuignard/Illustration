@@ -1,12 +1,27 @@
-<article>
-	<h1>Liste des images</h1>
-				<img ng-src="img/PhareMontage_1_idee.JPG"></img>
-				<img ng-src="img/PhareMontage_2_cartons.JPG"></img>
-				<img ng-src="img/PhareMontage_3_cartonsPeints.JPG"></img>
-				<img ng-src="img/PhareMontage_4_1erEtage.JPG"></img>
-				<img ng-src="img/PhareMontage_5_SansAbatSansTour.JPG"></img>
-				<img ng-src="img/PhareMontage_6_SansAbat.JPG"></img>
-				<img ng-src="img/PhareMontage_7_Fin.JPG"></img>
-				
+<article class="container-fluid">
+	<div ng-controller="ImagesController" class="row-fluid">
+		<h1>Réalisation d'un phare</h1>	
+			<article ng-repeat="image in images">
+				<a href ng-model="image" ng-click='go(image)'>
+					<h4 class="span3 offset">
+						<img ng-src="img/{{image.file}}" alt="{{image.legende}}" id="{{image.partial}}">
+						</img>
+					{{image.legende}}</h4>
+				</a>
 			</article>
+			<section id="partial" class="row">
+				<div class="span12">
+					<p> image actuelle :  {{imgCourante.legende}}</p>
+					<div class="offset3">
+						<canvas id="myCanvas"
+					style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+					</div>
+				</div>
+			</section>
+	</div>		
+</article>
+
+
+
   
