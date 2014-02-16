@@ -1,39 +1,44 @@
 ﻿<!DOCTYPE html>
-<html lang="fr" ng-app>
+<!-- ng-app : racine de l'application  avec Illustration comme nom du module-->
+<html lang="fr" ng-app="Illustration">
     <head>
         <meta charset="utf-8" />
         <title>Réalisations artistiques personnelles</title>
-        <link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<script src="lib/angular/angular.js"></script>
-		<script src="js/controllers.js"></script>
     </head>
  
-    <body ng-controller="IllustrationCtrl">
+    <body>
            <header>
 			   <h1>Réalisations artistiques personnelles</h1>
+			   <!--Bug : get Version -->
+			   <h6>Angular seed app: v<span app-version></span></h6>
             </header>
             <!-- http://paddyweblog.blogspot.fr/2013/04/navigation-in-angularjs.html-->
-            <nav>
+            <nav ng-controller="IllustrationController">
                     <ul id="tabnav">
-                        <li class="active"><a href="#" ng-model="projet">Accueil</a></li>
-                        <li><a href="#Phare" ng-model="projet">Réalisation d'un Phare</a></li>
-                        <li><a href="#sujets" ng-model="projet">Sujets de dessins</a></li>
+						<li class="active" >
+							<a ng-href="#">Accueil</a>
+						</li>
+						<li ng-repeat="page in pages">
+							<a ng-href="#/{{page.name}}">{{page.sentence}}</a>
+						</li>
                     </ul>
-                    <h1>{{ projet }}</h1>
             </nav>
-            <article>
-				<section name="PhareBD">
-					<h2><a href="PhareBD.html">Réalisation d'un Phare</a></h2>
-				</section>
-				<section name="CommentaireDessin">
-					<h2><a href="CommentaireDessin.html">Commentaires d'un dessin en couleur</a></h2>
-				</section>
-			</article>
-               
+            <!-- <div ng-view></div>  --><!-- vue résumé-->
+            <div ng-view></div> <!-- vue développé-->
              
             <footer>
             </footer>
+            
+            <!-- Placer les scripts avant /body pour ne pas bloquer le contenu de la page  -->
+            <link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<script src="lib/angular/angular.js"></script>
+			<script src="lib/angular/angular-route.js"></script>
+			<script src="js/app.js"></script>
+			<script src="js/controllers.js"></script>
+			<script src="js/directives.js"></script>
+			<script src="js/factories.js"></script>
+			<script src="js/services.js"></script>
     </body>
 </html>
 
